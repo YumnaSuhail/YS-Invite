@@ -15,7 +15,7 @@ body{background:var(--night);color:var(--moon);font:17px/1.6 var(--sans);min-hei
 button,input,select,textarea{font:inherit}
 
 /* Cover: photo booth */
-#cover{--w:min(36vw,11vh,140px);position:fixed;inset:0;z-index:10;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:8px;border:0;padding:max(28px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom));cursor:pointer;color:#fff;text-align:center;background:linear-gradient(#8809094d,#8809094d),url(assets/photo-1.jpg) center/cover no-repeat,#1a1a1a;transition:transform 1.2s cubic-bezier(.7,0,.25,1)}
+#cover{--w:min(36vw,11vh,140px);position:fixed;inset:0;z-index:10;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:8px;border:0;padding:max(28px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom));cursor:pointer;color:#fff;text-align:center;background:linear-gradient(#8809094d,#8809094d),url(photo-1.jpg) center/cover no-repeat,#1a1a1a;transition:transform 1.2s cubic-bezier(.7,0,.25,1)}
 #cover.gone{transform:translateY(100%)}
 #cover>*{position:relative}
 .top,.bot{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -48,7 +48,7 @@ button,input,select,textarea{font:inherit}
 .flap{position:absolute;left:0;right:0;top:0;height:58%;background:#d8d5ce;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s,opacity .4s .6s}
 .open .flap{transform:rotateX(180deg);opacity:0}
 .mono{position:absolute;left:0;right:0;bottom:14%;font:italic 400 30px var(--serif);color:#8b8882}
-.seal{position:absolute;left:50%;top:58%;width:92px;height:92px;margin:-46px 0 0 -46px;border:0;padding:0;cursor:pointer;background:url(assets/seal-1.png) center/contain no-repeat;filter:drop-shadow(0 4px 8px #0009);transition:transform .6s,opacity .5s .2s}
+.seal{position:absolute;left:50%;top:58%;width:92px;height:92px;margin:-46px 0 0 -46px;border:0;padding:0;cursor:pointer;background:url(seal-1.png) center/contain no-repeat;filter:drop-shadow(0 4px 8px #0009);transition:transform .6s,opacity .5s .2s}
 .open .seal{transform:scale(1.7);opacity:0;pointer-events:none}
 .tap{margin-top:16px;font:italic 19px var(--serif);color:var(--gold)}
 .open .tap{display:none}
@@ -65,7 +65,7 @@ button,input,select,textarea{font:inherit}
 .mh{text-align:center;font:italic 17px var(--serif);color:var(--gold)}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(#0000,#0003),url(assets/photo-2.jpg) center/cover no-repeat;filter:blur(1.5px) brightness(1.35)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(#0000,#0003),url(photo-2.jpg) center/cover no-repeat;filter:blur(1.5px) brightness(1.35)}
 /* Layout */
 main{max-width:640px;margin:0 auto;padding:0 22px 80px}
 section{padding:56px 0;border-bottom:1px solid #ffffff1a}
@@ -160,7 +160,7 @@ h2,.nm2,.date,.count,.tl2,footer,section>p{text-shadow:0 1px 8px #0008}
 
 <button id="cover" aria-label="Open the invitation">
 <span class="top"><span class="ttl">We are getting married!</span><span class="nm">Yumna &amp; Suhail</span></span>
-<span class="cab" role="img" aria-label="A vintage photo booth delivering a strip of photos of Yumna and Suhail"><span class="plate head"><b>PHOTOS</b><small>Delivered<br>here</small><em>In 3 Minutes</em><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v14M5 11l7 8 7-8" fill="none" stroke="#2e2e2c" stroke-width="3" stroke-linecap="square"/></svg></span><span class="plate"><span class="win"><span class="strip"><img class="ph" alt="" src="assets/photo-3.jpg"><img class="ph" alt="" src="assets/photo-4.jpg"><img class="ph" alt="" src="assets/photo-5.jpg"></span></span></span></span>
+<span class="cab" role="img" aria-label="A vintage photo booth delivering a strip of photos of Yumna and Suhail"><span class="plate head"><b>PHOTOS</b><small>Delivered<br>here</small><em>In 3 Minutes</em><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v14M5 11l7 8 7-8" fill="none" stroke="#2e2e2c" stroke-width="3" stroke-linecap="square"/></svg></span><span class="plate"><span class="win"><span class="strip"><img class="ph" alt="" src="photo-3.jpg"><img class="ph" alt="" src="photo-4.jpg"><img class="ph" alt="" src="photo-5.jpg"></span></span></span></span>
 <span class="bot"><span class="when">19 &middot; 12 &middot; 2026</span><span class="hint">Tap to open</span></span>
 </button>
 
@@ -178,7 +178,7 @@ h2,.nm2,.date,.count,.tl2,footer,section>p{text-shadow:0 1px 8px #0008}
     <p class="tap">Tap the seal to open</p>
     <div class="reveal late"><div><div class="pc-pad">
       <div class="inv">
-        <figure class="pol"><img alt="Yumna and Suhail" src="assets/photo-6.jpg"></figure>
+        <figure class="pol"><img alt="Yumna and Suhail" src="photo-6.jpg"></figure>
         <div class="det">
           <p class="k">Saturday</p><p class="big">19</p><p class="mo">December 2026</p>
           <i class="rule"></i>
@@ -282,7 +282,7 @@ document.querySelectorAll("#tl li").forEach(li => {
 })();
 
 // Music: spins the record, and plays the song if SONG_SRC is set
-const SONG_SRC = "assets/song.mp3";   // data: URL of an mp3 you have the rights to use
+const SONG_SRC = "song.mp3";   // data: URL of an mp3 you have the rights to use
 const song = $("song"), disc = $("disc");
 if (SONG_SRC) { song.src = SONG_SRC; }
 function setPlaying(on){
